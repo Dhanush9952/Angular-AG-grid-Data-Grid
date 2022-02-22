@@ -4,9 +4,12 @@ import { AgGridModule } from 'ag-grid-angular';
 
 import { AppComponent } from './app.component';
 
+
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+
   ],
   imports: [
     BrowserModule,
