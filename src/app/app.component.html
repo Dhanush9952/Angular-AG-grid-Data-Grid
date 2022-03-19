@@ -1,5 +1,5 @@
 <ag-grid-angular 
-    style="width: 1000px; height: 500px;" 
+    style="width: 990px; height: 300px;" 
     class="ag-theme-balham"
     [rowData]="rowData" 
     [columnDefs]="columnDefs"
@@ -7,4 +7,48 @@
 </ag-grid-angular>
 
 <button style="padding: 20px; color: white; background-color: green;" routerLink="a">Load Module A</button>
-<button style="padding: 20px; color: white; background-color: blue;" routerLink="b">Load Module B</button>
+<button style="padding: 20px; color: white; background-color: blue;" routerLink="b">Load Module B</button> -->
+
+<!-- <h2>PDF Viewer</h2>
+<h1> Angular PDF Viewer</h1>
+
+<div class="container">
+  <pdf-viewer [src]="pdfSource"
+              [original-size]="false"
+  ></pdf-viewer>
+</div>
+<pdf-viewer [src]="doc" [render-text]="true" style="display: block;">
+</pdf-viewer>
+
+<h6> Full Tutorial in Techiediaries </h6>
+
+<div class="container">
+  <textarea [(ngModel)] = "pdfSource"></textarea>
+
+  <pdf-viewer [src]="pdfSource"
+              [original-size]="false"
+  ></pdf-viewer>
+  
+</div>
+-->
+
+<h2>Integrate PDF File Viewer in Angular</h2>
+<div>
+<pdf-viewer
+  [src]="pdfSrc"
+  style="width: 900px; height: 400px;">
+</pdf-viewer>
+</div>
+
+<br>
+<div class="pdf">
+  <embed src="assets/pdf/typescript-handbook.pdf" frameborder="0" width="100%" height="400px">
+<h2>Integrate PDF File Viewer in Angular From Local Storage</h2>
+<iframe id="pdfViewer" [src]="pdfViewSrc" style="width: 100%; height: 450px;" 
+ zindex="100" ></iframe>
+<textarea [(ngModel)] = "pdfViewSrc"></textarea>
+<pdf-viewer 
+src="{{pdfViewSrc}}">
+</pdf-viewer>
+
+</div>

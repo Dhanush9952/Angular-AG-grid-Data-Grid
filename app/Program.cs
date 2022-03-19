@@ -1,4 +1,6 @@
-﻿using System;
+﻿#define TEST
+#define PI
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -61,6 +63,17 @@ public class Bank
     {
               // Console.BackgroundColor = ConsoleColor.DarkRed;
               // Console.ForegroundColor = ConsoleColor.Black;
+         #if (PI)
+            Console.WriteLine("PI is defined");
+         #else
+            Console.WriteLine("PI is not defined");
+         #endif
+         #if (TEST)
+         Console.WriteLine("TEST is defined");
+         #else
+         Console.WriteLine("TEST is not defined");
+         #endif
+         Console.ReadKey();
             Bank SBI = new Bank();
             SBI.Balance = 100;
             Console.WriteLine(SBI.Balance);
@@ -270,6 +283,43 @@ str1 = "Net";
 System.Console.WriteLine(str1);
 System.Console.WriteLine(str1);
 
+    System.Console.WriteLine($"String: {str1}");
+
+    int[] numberz = new int[] {1,2,3,4,5,6,7};  //Arrays Declaration
+    int total = numberz.Where(num => num>0).Sum();
+    System.Console.WriteLine("Sum={0}",total); 
+
+    List<Buyer> buyers = new List<Buyer>()
+    {
+      new Buyer() { Name = "Johny", District = "Fantasy District", Age=22 },
+      new Buyer() { Name = "Peter", District = "Scientist District", Age=40 },
+      new Buyer() { Name = "Paul", District = "Fantasy District", Age=30 },
+      new Buyer() { Name = "Maria", District = "Scientict District", Age=35 },
+      new Buyer() { Name = "Joshua", District = "EarthIsFlat District", Age=40 },
+      new Buyer() { Name = "Sylvia", District = "Developers District", Age=22 },
+      new Buyer() { Name = "Rebecca", District = "Scientist District", Age=30 },
+      new Buyer() { Name = "Jaime", District = "Developers District", Age=35 },
+      new Buyer() { Name = "Pierce", District = "Fantasy District", Age=40 },
+    };
+    List<Supplier> suppliers = new List<Supplier>()
+    {
+      new Supplier() { Name = "Harrisson", District = "Fantasy District", Age=22  },
+      new Supplier() { Name = "Charles", District = "Developers District", Age=40  },
+      new Supplier() { Name = "Hailee", District = "Scientist District", Age=35  },
+      new Supplier() { Name = "Taylor", District = "EarthIsFlat District", Age=30  },
+    };
+    // var innerJoin = from s in suppliers
+    //                 join b in buyers on s.District equals b.District
+    //                 select new
+    //                 {
+    //                   SupplierName = s.Name,
+    //                   BuyerName = b.Name,
+    //                   b.District 
+    //                 };
+    //     foreach (var item in innerJoin)
+    //     {
+    //       System.Console.WriteLine(item);
+    //     }
     }
 
     private static void ban()
@@ -307,3 +357,4 @@ System.Console.WriteLine(str1);
     }
   }
 }
+

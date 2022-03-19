@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, VERSION } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,6 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'AG-Grids';
+  doc = "https://vadimdez.github.io/ng2-pdf-viewer/assets/pdf-test.pdf";
+
+ 
+  pdfSrc="https://vadimdez.github.io/ng2-pdf-viewer/assets/pdf-test.pdf";
+  pdfViewSrc = 'assets/pdf/typescript-handbook.pdf';
 
   columnDefs = [
     {headerName: 'Make', field: 'make'},
@@ -28,4 +33,5 @@ defaultColDef = {
   sortable: true,
   filter: true,
 };
+
 }

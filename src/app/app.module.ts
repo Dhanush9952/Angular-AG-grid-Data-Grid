@@ -3,6 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AgGridModule } from 'ag-grid-angular';
 
 import { AppComponent } from './app.component';
+import { PdfViewerModule } from 'ng2-pdf-viewer';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -14,6 +16,8 @@ import { AppComponent } from './app.component';
   imports: [
     BrowserModule,
     AgGridModule.withComponents(null),
+    PdfViewerModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
