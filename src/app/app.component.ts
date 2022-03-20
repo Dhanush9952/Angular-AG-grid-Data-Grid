@@ -1,4 +1,5 @@
 import { Component, VERSION } from '@angular/core';
+import { DocviewerComponent } from './docviewer/docviewer.component';
 
 @Component({
   selector: 'app-root',

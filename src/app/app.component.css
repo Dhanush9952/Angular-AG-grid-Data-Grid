@@ -5,9 +5,14 @@ button
 h2{
     font-family: Calibri;
     text-align: center;
+    background: rgb(211, 66, 66);
+    color: white;
 }
 .pdf pdf-viewer{
     padding-left: 10%;
     width: 800px; 
     height: 600px;
+}
+.word h2{
+    background: dodgerblue;
 }

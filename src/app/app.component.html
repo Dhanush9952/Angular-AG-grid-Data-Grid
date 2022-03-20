@@ -1,3 +1,4 @@
+
 <ag-grid-angular 
     style="width: 990px; height: 300px;" 
     class="ag-theme-balham"
@@ -34,7 +35,7 @@
 
 <h2>Integrate PDF File Viewer in Angular</h2>
 <div>
-<pdf-viewer
+  <pdf-viewer
   [src]="pdfSrc"
   style="width: 900px; height: 400px;">
 </pdf-viewer>
@@ -42,13 +43,17 @@
 
 <br>
 <div class="pdf">
+  <h2>Integrate PDF File Viewer in Angular using "embed" tag</h2>
   <embed src="assets/pdf/typescript-handbook.pdf" frameborder="0" width="100%" height="400px">
 <h2>Integrate PDF File Viewer in Angular From Local Storage</h2>
-<iframe id="pdfViewer" [src]="pdfViewSrc" style="width: 100%; height: 450px;" 
- zindex="100" ></iframe>
 <textarea [(ngModel)] = "pdfViewSrc"></textarea>
 <pdf-viewer 
 src="{{pdfViewSrc}}">
 </pdf-viewer>
-
 </div>
+<br>
+<div class="word">
+  <h2>Add Word Document to Angular</h2>
+  <app-docviewer></app-docviewer>
+</div>
+
